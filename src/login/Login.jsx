@@ -53,7 +53,9 @@ const Login = () => {
       {user && (
         <div>
           <h2>User Name : {user.displayName}</h2>
-          <p>Email : {user.email}</p>
+          {
+            user.email && <p>Email : {user.email}</p>
+          }
           <img src={user.photoURL} alt="" />
         </div>
       )}
